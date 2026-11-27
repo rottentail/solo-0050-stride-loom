@@ -1,0 +1,356 @@
+{
+  "project_shape": "fullstack",
+  "product": {
+    "name": "折步台 Stride Loom",
+    "description": "供角色程序与技术美术共同使用的浏览器动作状态机工作台。把输入脚本、骨架姿态、根位移和事件轨绑定在同一个确定性动作图上，逐拍观察规则，冻结可交接的下游运行时数据。",
+    "primary_interface": "浏览器交互工作台及 Python HTTP API",
+    "core_workflows": [
+      "载入演示动作图并预检引用与边界",
+      "编辑动作片段与事件、迁移条件、输入有效期，在同一预演中观察姿态和根位移",
+      "比较镜像快进与原速的逐拍轨迹",
+      "按基准版本保存不可变调校修订并取回旧版",
+      "冻结与验证可重算的动作图和示范轨迹交接包"
+    ]
+  },
+  "modules": [
+    {
+      "id": "http",
+      "path": "stride/http.py",
+      "responsibility": "提供本机 HTTP 与静态入口"
+    },
+    {
+      "id": "api",
+      "path": "stride/api.py",
+      "responsibility": "协调工作头、动作预演和交接"
+    },
+    {
+      "id": "codec",
+      "path": "stride/codec.py",
+      "responsibility": "规范 JSON 字节并计算身份"
+    },
+    {
+      "id": "demo",
+      "path": "stride/demo.py",
+      "responsibility": "读取内置潮灯搬运体"
+    },
+    {
+      "id": "document",
+      "path": "stride/document.py",
+      "responsibility": "校验文档及声明间引用"
+    },
+    {
+      "id": "rig",
+      "path": "stride/rig.py",
+      "responsibility": "检查父子树与绑定偏移"
+    },
+    {
+      "id": "clips",
+      "path": "stride/clips.py",
+      "responsibility": "检查有效源帧及姿态和事件"
+    },
+    {
+      "id": "edges",
+      "path": "stride/edges.py",
+      "responsibility": "检查动作边命令与来源事件"
+    },
+    {
+      "id": "scenes",
+      "path": "stride/scenes.py",
+      "responsibility": "读取带速度与镜像的输入脚本"
+    },
+    {
+      "id": "compile",
+      "path": "stride/compile.py",
+      "responsibility": "维护动作、事件及稳定的候选顺序"
+    },
+    {
+      "id": "runner",
+      "path": "stride/runner.py",
+      "responsibility": "串联每拍更新并记录状态"
+    },
+    {
+      "id": "clock",
+      "path": "stride/clock.py",
+      "responsibility": "推进源帧、循环与进入动作"
+    },
+    {
+      "id": "inputs",
+      "path": "stride/inputs.py",
+      "responsibility": "管理按键身份、到期与消费"
+    },
+    {
+      "id": "gates",
+      "path": "stride/gates.py",
+      "responsibility": "解释候选边并选择唯一胜者"
+    },
+    {
+      "id": "motion",
+      "path": "stride/motion.py",
+      "responsibility": "投影本拍事件和世界根位移"
+    },
+    {
+      "id": "pose",
+      "path": "stride/pose.py",
+      "responsibility": "取样并展开骨架世界点"
+    },
+    {
+      "id": "compare",
+      "path": "stride/compare.py",
+      "responsibility": "按拍识别可观察差异"
+    },
+    {
+      "id": "revision",
+      "path": "stride/revision.py",
+      "responsibility": "存取图修订和工作头"
+    },
+    {
+      "id": "fs",
+      "path": "stride/fs.py",
+      "responsibility": "原子替换持久资料"
+    },
+    {
+      "id": "pack",
+      "path": "stride/pack.py",
+      "responsibility": "冻结修订中的场景及复演证据"
+    },
+    {
+      "id": "verify",
+      "path": "stride/verify.py",
+      "responsibility": "核对包摘要和重算语义"
+    },
+    {
+      "id": "studio",
+      "path": "stride/web/main.js",
+      "responsibility": "协调编辑、视图和 HTTP 调用"
+    },
+    {
+      "id": "timeline",
+      "path": "stride/web/timeline.js",
+      "responsibility": "可定位、可播放的拍点时间轴"
+    },
+    {
+      "id": "handoff",
+      "path": "stride/web/handoff-panel.js",
+      "responsibility": "显示谱系并和本地交接文件交互"
+    }
+  ],
+  "workflows": [
+    {
+      "id": "load",
+      "name": "载入动作图",
+      "entry": "GET graph 和 revisions",
+      "success": "确定当前工作头，读规范化图和谱系",
+      "failure": "未知修订返回 404",
+      "verification": "python3 -m stride walkthrough load",
+      "steps": [
+        "演示数据只在无工作头时初始化。重开时继续使用数据目录中的头指针",
+        "确定当前工作头，读规范化图和谱系"
+      ],
+      "module_ids": [
+        "http",
+        "api",
+        "demo",
+        "revision",
+        "codec",
+        "document"
+      ]
+    },
+    {
+      "id": "validate",
+      "name": "预检源资料",
+      "entry": "POST validate",
+      "success": "验证关节树、逐帧轨及动作边引用",
+      "failure": "来源事件未知时返回 422",
+      "verification": "python3 -m stride walkthrough validate",
+      "steps": [
+        "局部值合法仍可能有失效的跨对象引用，预检必须使用完整图",
+        "验证关节树、逐帧轨及动作边引用"
+      ],
+      "module_ids": [
+        "api",
+        "document",
+        "rig",
+        "clips",
+        "edges",
+        "scenes"
+      ]
+    },
+    {
+      "id": "preview",
+      "name": "执行预演",
+      "entry": "POST run",
+      "success": "给出唯一胜者、源帧、根轨及输入消费",
+      "failure": "超出脚本边界时返回 422",
+      "verification": "python3 -m stride walkthrough preview",
+      "steps": [
+        "候选解释共用消费之前的输入事实，获胜后位置仍归本拍来源",
+        "给出唯一胜者、源帧、根轨及输入消费"
+      ],
+      "module_ids": [
+        "api",
+        "document",
+        "scenes",
+        "compile",
+        "runner",
+        "clock",
+        "inputs",
+        "gates",
+        "motion",
+        "pose"
+      ]
+    },
+    {
+      "id": "variants",
+      "name": "快进及镜像预演",
+      "entry": "POST run",
+      "success": "显示两帧推进和镜像根方向",
+      "failure": "速率超过支持范围返回 422",
+      "verification": "python3 -m stride walkthrough variants",
+      "steps": [
+        "展示帧是实际穿越末帧，事件可能来自中间帧。镜像不能改变命令年龄",
+        "显示两帧推进和镜像根方向"
+      ],
+      "module_ids": [
+        "api",
+        "scenes",
+        "clock",
+        "motion",
+        "pose",
+        "runner"
+      ]
+    },
+    {
+      "id": "compare",
+      "name": "比较预演",
+      "entry": "POST compare",
+      "success": "给出可见字段的首差异和完整两侧",
+      "failure": "任一场景未知则返回 404",
+      "verification": "python3 -m stride walkthrough compare",
+      "steps": [
+        "候选解释或排队变化与已经观察到的动作差异分开",
+        "给出可见字段的首差异和完整两侧"
+      ],
+      "module_ids": [
+        "api",
+        "document",
+        "compare",
+        "runner",
+        "clock",
+        "gates",
+        "pose"
+      ]
+    },
+    {
+      "id": "save",
+      "name": "保存图修订",
+      "entry": "POST save",
+      "success": "以父修订为基准更新工作头",
+      "failure": "工作头已变时返回 409",
+      "verification": "python3 -m stride walkthrough save",
+      "steps": [
+        "图校验和原子发布头的时点不同，同时写入仍必须串行",
+        "以父修订为基准更新工作头"
+      ],
+      "module_ids": [
+        "api",
+        "revision",
+        "fs",
+        "document",
+        "codec"
+      ]
+    },
+    {
+      "id": "history",
+      "name": "读历史修订",
+      "entry": "GET revisions 和 graph?revision=…",
+      "success": "沿父链浏览并取回已保存图",
+      "failure": "未知历史返回 404",
+      "verification": "python3 -m stride walkthrough history",
+      "steps": [
+        "历史树使用内容与父修订识别，同名图仍可有多份调校记录",
+        "沿父链浏览并取回已保存图"
+      ],
+      "module_ids": [
+        "http",
+        "api",
+        "revision",
+        "codec"
+      ]
+    },
+    {
+      "id": "freeze",
+      "name": "冻结动作交接包",
+      "entry": "GET pack?revision=…&scene=…",
+      "success": "图、场景和完整轨迹共享同一交接摘要",
+      "failure": "场景不存在返回 404",
+      "verification": "python3 -m stride walkthrough freeze",
+      "steps": [
+        "场景可以从已保存图取证，未保存的 UI 值没有修订身份",
+        "图、场景和完整轨迹共享同一交接摘要"
+      ],
+      "module_ids": [
+        "api",
+        "revision",
+        "pack",
+        "runner",
+        "codec"
+      ]
+    },
+    {
+      "id": "verify",
+      "name": "独立复验动作包",
+      "entry": "POST verify",
+      "success": "验证格式、身份和可重复轨迹",
+      "failure": "摘要、修订或运行语义不同返回 422",
+      "verification": "python3 -m stride walkthrough verify",
+      "steps": [
+        "字节摘要一致无法推出内容真实，复验还要规范化图并重跑",
+        "验证格式、身份和可重复轨迹"
+      ],
+      "module_ids": [
+        "api",
+        "verify",
+        "codec",
+        "document",
+        "pack",
+        "runner"
+      ]
+    },
+    {
+      "id": "rehearse",
+      "name": "复演收到的动作包",
+      "entry": "POST rehearse",
+      "success": "得到指定工作场景和原始逐拍记录",
+      "failure": "格式不支持则拒绝",
+      "verification": "python3 -m stride walkthrough rehearse",
+      "steps": [
+        "重播从包中提取确切场景，不依赖接收方运行目录中的工作头",
+        "得到指定工作场景和原始逐拍记录"
+      ],
+      "module_ids": [
+        "http",
+        "api",
+        "verify",
+        "document",
+        "runner",
+        "pack"
+      ]
+    }
+  ],
+  "complexity": {
+    "mechanisms": [
+      "state_machine",
+      "resource_lifecycle",
+      "error_propagation",
+      "concurrency",
+      "versioning_audit",
+      "export_freeze",
+      "ranking_reorder",
+      "time_semantics",
+      "idempotency",
+      "policy_rules",
+      "lineage",
+      "snapshot_consistency"
+    ]
+  }
+}

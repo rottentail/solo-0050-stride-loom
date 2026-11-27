@@ -1,0 +1,5196 @@
+{
+  "task_source_schema_version": 1,
+  "cc_feedback_profile": "cc-feedback-2611",
+  "project_domain": "游戏、图形与多媒体",
+  "project_subdirection": "游戏开发",
+  "supported_task_types": [
+    "功能开发",
+    "功能优化",
+    "代码重构",
+    "依赖升级与迁移",
+    "质量保障",
+    "项目维护",
+    "技术讨论",
+    "问题排查与诊断",
+    "部署运维",
+    "泛Agent需求"
+  ],
+  "type_coverage": {
+    "功能开发": {
+      "status": "supported",
+      "reason": "输入、骨架、事件、图修订和交接能力可承载新的动作运行机制。",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py",
+        "stride/clips.py",
+        "stride/pose.py",
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/compile.py",
+        "stride/clock.py",
+        "stride/scenes.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/edges.py",
+        "stride/api.py",
+        "stride/compare.py",
+        "stride/web/timeline.js",
+        "stride/web/main.js",
+        "stride/revision.py",
+        "stride/codec.py",
+        "stride/fs.py",
+        "stride/pack.py",
+        "stride/verify.py"
+      ]
+    },
+    "功能优化": {
+      "status": "supported",
+      "reason": "既有预演、对照、历史回读与交接有可迭代的用户行为。",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py",
+        "stride/clips.py",
+        "stride/pose.py",
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/compile.py",
+        "stride/clock.py",
+        "stride/scenes.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/edges.py",
+        "stride/api.py",
+        "stride/compare.py",
+        "stride/web/timeline.js",
+        "stride/web/main.js",
+        "stride/revision.py",
+        "stride/codec.py",
+        "stride/fs.py",
+        "stride/pack.py",
+        "stride/verify.py"
+      ]
+    },
+    "代码重构": {
+      "status": "supported",
+      "reason": "动作时钟的语义边界和修订图的读取边界各有两个生产入口可核对。",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/scenes.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/compile.py",
+        "stride/api.py",
+        "stride/compare.py",
+        "stride/revision.py",
+        "stride/codec.py",
+        "stride/fs.py",
+        "stride/document.py",
+        "stride/verify.py"
+      ]
+    },
+    "依赖升级与迁移": {
+      "status": "supported",
+      "reason": "动作时基与修订存储的当前实现均可迁移，旧图和既有包提供历史兼容证据。",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py",
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/compile.py",
+        "stride/clock.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/scenes.py",
+        "stride/revision.py",
+        "stride/codec.py",
+        "stride/fs.py",
+        "stride/document.py",
+        "stride/pack.py",
+        "stride/verify.py"
+      ]
+    },
+    "质量保障": {
+      "status": "supported",
+      "reason": "独立推导的动作门、变体与交接结果可通过真实脚本验证。",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py",
+        "stride/clips.py",
+        "stride/pose.py",
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/compile.py",
+        "stride/clock.py",
+        "stride/scenes.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/edges.py",
+        "stride/compare.py",
+        "stride/verify.py"
+      ]
+    },
+    "项目维护": {
+      "status": "supported",
+      "reason": "角色程序可用源图、版本身份、复演路径和关节/时序说明完成动作资产交接。",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py",
+        "stride/clips.py",
+        "stride/pose.py",
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/compile.py",
+        "stride/clock.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/edges.py",
+        "stride/api.py",
+        "stride/scenes.py",
+        "stride/compare.py",
+        "stride/revision.py",
+        "stride/codec.py",
+        "stride/pack.py",
+        "stride/verify.py"
+      ]
+    },
+    "技术讨论": {
+      "status": "supported",
+      "reason": "程序与技术美术可以基于运行时条件比较事件消费、动作坐标及引擎接入方案。",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py",
+        "stride/clips.py",
+        "stride/pose.py",
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/compile.py",
+        "stride/clock.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/scenes.py",
+        "stride/compare.py",
+        "stride/verify.py",
+        "stride/revision.py"
+      ]
+    },
+    "问题排查与诊断": {
+      "status": "supported",
+      "reason": "穿越帧、候选解释、消费身份与包复验阶段为可区分的故障原因提供可观测事实。",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/compile.py",
+        "stride/clock.py",
+        "stride/scenes.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/edges.py",
+        "stride/clips.py",
+        "stride/compare.py",
+        "stride/revision.py",
+        "stride/fs.py",
+        "stride/codec.py",
+        "stride/pack.py",
+        "stride/verify.py"
+      ]
+    },
+    "部署运维": {
+      "status": "supported",
+      "reason": "动作交接能在独立实例复演，工作头、历史版本与文件身份支持回收恢复验收。",
+      "source_anchors": [
+        "stride/api.py",
+        "stride/scenes.py",
+        "stride/compare.py",
+        "stride/runner.py",
+        "stride/revision.py",
+        "stride/codec.py",
+        "stride/fs.py",
+        "stride/document.py",
+        "stride/pack.py",
+        "stride/verify.py",
+        "stride/web/main.js",
+        "stride/inputs.py",
+        "stride/rig.py",
+        "stride/clips.py",
+        "stride/pose.py",
+        "stride/motion.py"
+      ]
+    },
+    "泛Agent需求": {
+      "status": "supported",
+      "reason": "具备可独立复演的示例，能在跨资产引用和角色动作相位条件下制作实质性交接资料。",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py",
+        "stride/clips.py",
+        "stride/pose.py",
+        "stride/motion.py",
+        "stride/runner.py",
+        "stride/compile.py",
+        "stride/clock.py",
+        "stride/scenes.py",
+        "stride/inputs.py",
+        "stride/gates.py",
+        "stride/edges.py",
+        "stride/api.py",
+        "stride/compare.py",
+        "stride/revision.py",
+        "stride/codec.py",
+        "stride/pack.py",
+        "stride/verify.py"
+      ]
+    },
+    "Bugfix": {
+      "status": "no_verified_defect",
+      "reason": "代表性的预演、保存、交接和复验路径走查通过，当前无已确认且适合出题的真实合同缺陷。"
+    }
+  },
+  "prompt_contract": {
+    "schema_version": 1,
+    "mode": "integrated",
+    "baseline_tier": "deep-task-ready",
+    "generation_scope": {
+      "mode": "all_supported"
+    },
+    "minimum_active_prompts": {
+      "功能开发": 20,
+      "功能优化": 20,
+      "代码重构": 2,
+      "依赖升级与迁移": 2,
+      "质量保障": 2,
+      "项目维护": 2,
+      "技术讨论": 2,
+      "问题排查与诊断": 2,
+      "部署运维": 2,
+      "泛Agent需求": 2
+    },
+    "minimum_anchors": {
+      "功能开发": 25,
+      "功能优化": 25,
+      "代码重构": 15,
+      "依赖升级与迁移": 15,
+      "质量保障": 15,
+      "项目维护": 15,
+      "技术讨论": 15,
+      "问题排查与诊断": 15,
+      "部署运维": 15,
+      "泛Agent需求": 15
+    },
+    "capacity_floor": {
+      "modules": 8,
+      "workflows": 10,
+      "mechanisms": 8,
+      "entities": 8,
+      "state_machines": 5,
+      "extension_seams": 12,
+      "tension_points": 10
+    }
+  },
+  "entities": [
+    {
+      "id": "document",
+      "label": "动作图",
+      "relations": [
+        "clip",
+        "rig",
+        "edge",
+        "scene"
+      ],
+      "invariants": [
+        "读取时版本及全图引用一致"
+      ]
+    },
+    {
+      "id": "joint",
+      "label": "骨架关节",
+      "relations": [
+        "parent",
+        "joint"
+      ],
+      "invariants": [
+        "唯一根且先父后子"
+      ]
+    },
+    {
+      "id": "clip",
+      "label": "动作片段",
+      "relations": [
+        "joint",
+        "key",
+        "mark"
+      ],
+      "invariants": [
+        "根轨长度严格等于源帧数"
+      ]
+    },
+    {
+      "id": "key",
+      "label": "姿态关键帧",
+      "relations": [
+        "clip",
+        "joint"
+      ],
+      "invariants": [
+        "首帧为零且严格递增"
+      ]
+    },
+    {
+      "id": "mark",
+      "label": "帧事件",
+      "relations": [
+        "clip",
+        "edge"
+      ],
+      "invariants": [
+        "仅在实际穿越的每次来源帧触发"
+      ]
+    },
+    {
+      "id": "edge",
+      "label": "转场边",
+      "relations": [
+        "clip",
+        "press",
+        "mark"
+      ],
+      "invariants": [
+        "每拍至多一个赢家"
+      ]
+    },
+    {
+      "id": "scene",
+      "label": "预演场景",
+      "relations": [
+        "document",
+        "press"
+      ],
+      "invariants": [
+        "输入范围受场景拍数约束"
+      ]
+    },
+    {
+      "id": "press",
+      "label": "输入胶囊",
+      "relations": [
+        "scene",
+        "edge"
+      ],
+      "invariants": [
+        "一次进入只有一个身份且至多消费一次"
+      ]
+    },
+    {
+      "id": "row",
+      "label": "逐拍轨迹行",
+      "relations": [
+        "clip",
+        "mark",
+        "press"
+      ],
+      "invariants": [
+        "当拍仍观察来源动作"
+      ]
+    },
+    {
+      "id": "revision",
+      "label": "动作图修订",
+      "relations": [
+        "document",
+        "parent"
+      ],
+      "invariants": [
+        "同一标识为不可变记录"
+      ]
+    },
+    {
+      "id": "handoff",
+      "label": "动作交接包",
+      "relations": [
+        "revision",
+        "scene",
+        "row"
+      ],
+      "invariants": [
+        "文件内容可复算逐拍证据"
+      ]
+    }
+  ],
+  "state_machines": [
+    {
+      "subject": "输入胶囊",
+      "states": [
+        "待到达",
+        "缓冲",
+        "消费",
+        "到期"
+      ],
+      "transitions": [
+        "待到达->缓冲",
+        "缓冲->消费",
+        "缓冲->到期"
+      ],
+      "invariants": [
+        "同一身份不会同时消费和到期"
+      ]
+    },
+    {
+      "subject": "动作时钟",
+      "states": [
+        "进入",
+        "推进",
+        "尾停留"
+      ],
+      "transitions": [
+        "进入->推进",
+        "推进->推进",
+        "推进->尾停留",
+        "推进->进入",
+        "尾停留->进入"
+      ],
+      "invariants": [
+        "循环和非循环尾端采用不同前进规则"
+      ]
+    },
+    {
+      "subject": "候选动作边",
+      "states": [
+        "评估",
+        "未满足",
+        "采用",
+        "顺位在后"
+      ],
+      "transitions": [
+        "评估->未满足",
+        "评估->采用",
+        "评估->顺位在后"
+      ],
+      "invariants": [
+        "每拍至多一条采用"
+      ]
+    },
+    {
+      "subject": "图修订",
+      "states": [
+        "草稿",
+        "当前",
+        "历史"
+      ],
+      "transitions": [
+        "草稿->当前",
+        "当前->历史"
+      ],
+      "invariants": [
+        "版本内容不可变，历史回读后另建草稿"
+      ]
+    },
+    {
+      "subject": "文件复验",
+      "states": [
+        "外部文件",
+        "摘要一致",
+        "可复演",
+        "拒绝"
+      ],
+      "transitions": [
+        "外部文件->摘要一致",
+        "外部文件->拒绝",
+        "摘要一致->可复演",
+        "摘要一致->拒绝"
+      ],
+      "invariants": [
+        "通过格式和身份以及轨迹才能重播"
+      ]
+    },
+    {
+      "subject": "预演传输",
+      "states": [
+        "静止",
+        "播放",
+        "末拍"
+      ],
+      "transitions": [
+        "静止->播放",
+        "播放->静止",
+        "播放->末拍",
+        "末拍->播放"
+      ],
+      "invariants": [
+        "选拍后停止旧播放计时"
+      ]
+    }
+  ],
+  "capability_families": [
+    {
+      "family": "资源生命周期",
+      "occupied_by": [
+        "load"
+      ],
+      "available": true
+    },
+    {
+      "family": "规则与约束",
+      "occupied_by": [
+        "validate"
+      ],
+      "available": true
+    },
+    {
+      "family": "时序及仲裁",
+      "occupied_by": [
+        "preview"
+      ],
+      "available": true
+    },
+    {
+      "family": "空间与采样",
+      "occupied_by": [
+        "variants"
+      ],
+      "available": true
+    },
+    {
+      "family": "对照与归因",
+      "occupied_by": [
+        "compare"
+      ],
+      "available": true
+    },
+    {
+      "family": "并发与锁",
+      "occupied_by": [
+        "save"
+      ],
+      "available": true
+    },
+    {
+      "family": "版本化与审计",
+      "occupied_by": [
+        "history"
+      ],
+      "available": true
+    },
+    {
+      "family": "导出与冻结",
+      "occupied_by": [
+        "freeze"
+      ],
+      "available": true
+    },
+    {
+      "family": "完整性和语义",
+      "occupied_by": [
+        "verify"
+      ],
+      "available": true
+    },
+    {
+      "family": "复演与兼容",
+      "occupied_by": [
+        "rehearse"
+      ],
+      "available": true
+    }
+  ],
+  "extension_seams": [
+    {
+      "id": "rig-tree",
+      "anchor": "stride/rig.py 绑定树",
+      "entry": "validate",
+      "distinct_outcome": "错误父节点被预检拒绝"
+    },
+    {
+      "id": "angle-key",
+      "anchor": "stride/clips.py 姿态采样",
+      "entry": "variants",
+      "distinct_outcome": "中间帧的千分单位关节点可比较"
+    },
+    {
+      "id": "root-world",
+      "anchor": "stride/motion.py 世界根轨",
+      "entry": "preview",
+      "distinct_outcome": "世界位置跨到目标动作仍连续"
+    },
+    {
+      "id": "mark-cross",
+      "anchor": "stride/compile.py 帧事件",
+      "entry": "variants",
+      "distinct_outcome": "被越过但穿过的事件仍出现"
+    },
+    {
+      "id": "command-index",
+      "anchor": "stride/scenes.py 按键身份",
+      "entry": "preview",
+      "distinct_outcome": "重复命令获得不同编号"
+    },
+    {
+      "id": "command-expire",
+      "anchor": "stride/inputs.py 有效窗口",
+      "entry": "preview",
+      "distinct_outcome": "下一拍会列为过期"
+    },
+    {
+      "id": "transition-tie",
+      "anchor": "stride/compile.py 动作边顺位",
+      "entry": "preview",
+      "distinct_outcome": "运行动作记录另一条顺位在后"
+    },
+    {
+      "id": "transition-age",
+      "anchor": "stride/clock.py 停留门",
+      "entry": "preview",
+      "distinct_outcome": "解释列表可同时显示多个未满足项"
+    },
+    {
+      "id": "enter-later",
+      "anchor": "stride/runner.py 转场时点",
+      "entry": "preview",
+      "distinct_outcome": "当拍的动作标识和目标可同时呈现"
+    },
+    {
+      "id": "scene-variant",
+      "anchor": "stride/api.py 预演局部变体",
+      "entry": "compare",
+      "distinct_outcome": "两侧输出不会串写"
+    },
+    {
+      "id": "trace-observable",
+      "anchor": "stride/compare.py 轨迹对照",
+      "entry": "compare",
+      "distinct_outcome": "首差异给出拍号和字段"
+    },
+    {
+      "id": "lineage",
+      "anchor": "stride/revision.py 图祖先",
+      "entry": "history",
+      "distinct_outcome": "可读取的历史轨迹与原先一致"
+    },
+    {
+      "id": "pack-pinning",
+      "anchor": "stride/pack.py 交接资料",
+      "entry": "freeze",
+      "distinct_outcome": "下载旧版可在最新工作头之外复演"
+    },
+    {
+      "id": "pack-recompute",
+      "anchor": "stride/verify.py 收到的轨迹",
+      "entry": "rehearse",
+      "distinct_outcome": "不读取本地同名场景进行复演"
+    },
+    {
+      "id": "clock-loop",
+      "anchor": "stride/clock.py 循环动作",
+      "entry": "variants",
+      "distinct_outcome": "同一拍末帧与首帧可共同出现"
+    },
+    {
+      "id": "scene-speed",
+      "anchor": "stride/scenes.py 源帧推进速率",
+      "entry": "variants",
+      "distinct_outcome": "快进有不同源帧覆盖但拍数相同"
+    }
+  ],
+  "tension_points": [
+    {
+      "workflow_id": "load",
+      "description": "演示数据只在无工作头时初始化。重开时继续使用数据目录中的头指针",
+      "observable_failure": "既有修订被演示重置就无法工作交接"
+    },
+    {
+      "workflow_id": "validate",
+      "description": "局部值合法仍可能有失效的跨对象引用，预检必须使用完整图",
+      "observable_failure": "无法在来源片段出现的门会永远关着"
+    },
+    {
+      "workflow_id": "preview",
+      "description": "候选解释共用消费之前的输入事实，获胜后位置仍归本拍来源",
+      "observable_failure": "下一拍开始可见片段，不能用目标姿态覆盖来源末拍"
+    },
+    {
+      "workflow_id": "variants",
+      "description": "展示帧是实际穿越末帧，事件可能来自中间帧。镜像不能改变命令年龄",
+      "observable_failure": "仅取展示末帧会丢失有效转场事件"
+    },
+    {
+      "workflow_id": "compare",
+      "description": "候选解释或排队变化与已经观察到的动作差异分开",
+      "observable_failure": "比较只对齐拍号可能把插入动作之后的多拍都标记为变化"
+    },
+    {
+      "workflow_id": "save",
+      "description": "图校验和原子发布头的时点不同，同时写入仍必须串行",
+      "observable_failure": "较晚请求静默覆盖先前差异会丢失编辑"
+    },
+    {
+      "workflow_id": "history",
+      "description": "历史树使用内容与父修订识别，同名图仍可有多份调校记录",
+      "observable_failure": "按图名回读会得到错误的输入轨与转场"
+    },
+    {
+      "workflow_id": "freeze",
+      "description": "场景可以从已保存图取证，未保存的 UI 值没有修订身份",
+      "observable_failure": "冻结历史图却重跑当前场景会产生不能证明来源的包"
+    },
+    {
+      "workflow_id": "verify",
+      "description": "字节摘要一致无法推出内容真实，复验还要规范化图并重跑",
+      "observable_failure": "只查摘要会让带错世界位置的轨迹通过"
+    },
+    {
+      "workflow_id": "rehearse",
+      "description": "重播从包中提取确切场景，不依赖接收方运行目录中的工作头",
+      "observable_failure": "使用本地同名图会破坏可重复性的承诺"
+    }
+  ],
+  "prompt_anchors": [
+    {
+      "id": "01-rig-tree",
+      "task_type": "功能开发",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/rig.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py"
+      ],
+      "subject": "绑定树",
+      "state": "跨关节引用",
+      "invariant": "关节有且仅有一个在前的父节点或为唯一根",
+      "observable": "错误父节点被预检拒绝",
+      "extension_seam_id": "rig-tree"
+    },
+    {
+      "id": "01-angle-key",
+      "task_type": "功能开发",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/pose.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py"
+      ],
+      "subject": "姿态采样",
+      "state": "关键帧间",
+      "invariant": "按源帧插值，叶和父节点各自解释",
+      "observable": "中间帧的千分单位关节点可比较",
+      "extension_seam_id": "angle-key"
+    },
+    {
+      "id": "01-root-world",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "extension_seam_id": "root-world"
+    },
+    {
+      "id": "01-mark-cross",
+      "task_type": "功能开发",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/motion.py"
+      ],
+      "subject": "帧事件",
+      "state": "跨过中间源帧",
+      "invariant": "按穿越先后列出，同帧遵循声明顺序",
+      "observable": "被越过但穿过的事件仍出现",
+      "extension_seam_id": "mark-cross"
+    },
+    {
+      "id": "01-clock-loop",
+      "task_type": "功能开发",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "extension_seam_id": "clock-loop"
+    },
+    {
+      "id": "01-clock-dwell",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/runner.py"
+      ],
+      "subject": "单次动作",
+      "state": "源帧耗尽",
+      "invariant": "尾停留中仍可继续评估无帧事件的边",
+      "observable": "展示帧不变，穿越数组为空",
+      "extension_seam_id": "root-world"
+    },
+    {
+      "id": "01-command-index",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "按键身份",
+      "state": "输入到达",
+      "invariant": "以声明中的位置识别输入，在实际到达拍入缓冲",
+      "observable": "重复命令获得不同编号",
+      "extension_seam_id": "command-index"
+    },
+    {
+      "id": "01-command-expire",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "extension_seam_id": "command-expire"
+    },
+    {
+      "id": "01-command-consume",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "消费",
+      "state": "两个命令相同",
+      "invariant": "消费最早的一个",
+      "observable": "其余编号仍在缓冲列表",
+      "extension_seam_id": "root-world"
+    },
+    {
+      "id": "01-transition-tie",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "ranking_reorder",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/gates.py"
+      ],
+      "subject": "动作边顺位",
+      "state": "同级同时满足",
+      "invariant": "声明顺序决定唯一胜者",
+      "observable": "运行动作记录另一条顺位在后",
+      "extension_seam_id": "transition-tie"
+    },
+    {
+      "id": "01-transition-age",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/gates.py"
+      ],
+      "subject": "停留门",
+      "state": "进入目标首拍",
+      "invariant": "新的停留拍数从 1 起算",
+      "observable": "解释列表可同时显示多个未满足项",
+      "extension_seam_id": "transition-age"
+    },
+    {
+      "id": "01-transition-tag",
+      "task_type": "功能开发",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/edges.py",
+          "stride/clips.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/edges.py",
+        "stride/clips.py"
+      ],
+      "subject": "帧事件条件",
+      "state": "来源片段换标记",
+      "invariant": "标签须真实存在于同一来源片段",
+      "observable": "被引用的标签不存在返回 422",
+      "extension_seam_id": "rig-tree"
+    },
+    {
+      "id": "01-check-root",
+      "task_type": "功能开发",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/document.py"
+      ],
+      "subject": "根轨长度",
+      "state": "片段改帧数",
+      "invariant": "每个源帧有一个根位移",
+      "observable": "单独改帧数会被预检拒绝",
+      "extension_seam_id": "rig-tree"
+    },
+    {
+      "id": "01-enter-later",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "extension_seam_id": "enter-later"
+    },
+    {
+      "id": "01-mirror",
+      "task_type": "功能开发",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/pose.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/pose.py",
+        "stride/motion.py"
+      ],
+      "subject": "镜像变体",
+      "state": "横向方向反转",
+      "invariant": "只反射空间，不重命名事件或命令",
+      "observable": "相同脚本的空间呈对称，转场相同",
+      "extension_seam_id": "angle-key"
+    },
+    {
+      "id": "01-scene-speed",
+      "task_type": "功能开发",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/clock.py"
+      ],
+      "subject": "源帧推进速率",
+      "state": "两帧模式",
+      "invariant": "源帧数变而命令仍按预演拍到达",
+      "observable": "快进有不同源帧覆盖但拍数相同",
+      "extension_seam_id": "scene-speed"
+    },
+    {
+      "id": "01-scene-range",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "输入脚本边界",
+      "state": "拍数收窄",
+      "invariant": "输入拍必须在有效范围内",
+      "observable": "不合法图无法启动预演",
+      "extension_seam_id": "root-world"
+    },
+    {
+      "id": "01-scene-variant",
+      "task_type": "功能开发",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/api.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/api.py",
+        "stride/scenes.py"
+      ],
+      "subject": "预演局部变体",
+      "state": "临时输入覆盖",
+      "invariant": "同一图可独立预演两份场景",
+      "observable": "两侧输出不会串写",
+      "extension_seam_id": "scene-variant"
+    },
+    {
+      "id": "01-trace-observable",
+      "task_type": "功能开发",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "extension_seam_id": "trace-observable"
+    },
+    {
+      "id": "01-trace-length",
+      "task_type": "功能开发",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/scenes.py"
+      ],
+      "subject": "对照尾端",
+      "state": "场景拍数不等",
+      "invariant": "无对应行的拍点标记长度差异",
+      "observable": "一侧多拍不被无声丢掉",
+      "extension_seam_id": "scene-variant"
+    },
+    {
+      "id": "01-playhead",
+      "task_type": "功能开发",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/web/timeline.js",
+          "stride/web/main.js"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/web/timeline.js",
+        "stride/web/main.js"
+      ],
+      "subject": "预演播放",
+      "state": "播放中手动选拍",
+      "invariant": "手动操作终止计时并画所选拍",
+      "observable": "检查器与骨架共用拍号",
+      "extension_seam_id": "root-world"
+    },
+    {
+      "id": "01-lineage",
+      "task_type": "功能开发",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "图祖先",
+      "state": "取回非当前版本",
+      "invariant": "基于内容和父身份识别图并保持原图",
+      "observable": "可读取的历史轨迹与原先一致",
+      "extension_seam_id": "lineage"
+    },
+    {
+      "id": "01-head",
+      "task_type": "功能开发",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/fs.py"
+        ]
+      },
+      "primary_mechanism": "concurrency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/fs.py"
+      ],
+      "subject": "工作头",
+      "state": "竞争写入",
+      "invariant": "锁内验证基准后再更换头指针",
+      "observable": "落后的写入收到 409",
+      "extension_seam_id": "lineage"
+    },
+    {
+      "id": "01-repeat-save",
+      "task_type": "功能开发",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/document.py"
+      ],
+      "subject": "保存",
+      "state": "规范化草稿等于当前图",
+      "invariant": "不新增子修订",
+      "observable": "返回同一身份",
+      "extension_seam_id": "lineage"
+    },
+    {
+      "id": "01-pack-pinning",
+      "task_type": "功能开发",
+      "capability_family": "导出与冻结",
+      "existing_touch_points": {
+        "files": [
+          "stride/pack.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "export_freeze",
+      "source_anchors": [
+        "stride/pack.py",
+        "stride/revision.py"
+      ],
+      "subject": "交接资料",
+      "state": "选中保存修订",
+      "invariant": "场景取自该修订且轨迹随包",
+      "observable": "下载旧版可在最新工作头之外复演",
+      "extension_seam_id": "pack-pinning"
+    },
+    {
+      "id": "01-pack-hash",
+      "task_type": "功能开发",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/codec.py"
+      ],
+      "subject": "包内容摘要",
+      "state": "外部修改",
+      "invariant": "内容摘要需重新匹配",
+      "observable": "只有字节层改变时报告摘要问题",
+      "extension_seam_id": "pack-recompute"
+    },
+    {
+      "id": "01-pack-id",
+      "task_type": "功能开发",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/revision.py"
+      ],
+      "subject": "包图修订",
+      "state": "父信息与图匹配",
+      "invariant": "修订绑定规范图及父身份",
+      "observable": "即使更新包摘要仍可发现身份不符",
+      "extension_seam_id": "pack-recompute"
+    },
+    {
+      "id": "01-pack-recompute",
+      "task_type": "功能开发",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "extension_seam_id": "pack-recompute"
+    },
+    {
+      "id": "01-source-editor",
+      "task_type": "功能开发",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/web/main.js",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "error_propagation",
+      "source_anchors": [
+        "stride/web/main.js",
+        "stride/document.py"
+      ],
+      "subject": "源资料编辑",
+      "state": "完整 JSON 一次生效",
+      "invariant": "拒绝值保留错误提示",
+      "observable": "可回到场景继续获取有效轨迹",
+      "extension_seam_id": "rig-tree"
+    },
+    {
+      "id": "01-revision-file",
+      "task_type": "功能开发",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "持久记录",
+      "state": "已有修订内容被改动",
+      "invariant": "读取时以文件名与摘要匹配",
+      "observable": "错误显示为身份不一致",
+      "extension_seam_id": "lineage"
+    },
+    {
+      "id": "02-rig-tree",
+      "task_type": "功能优化",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/rig.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py"
+      ],
+      "subject": "绑定树",
+      "state": "跨关节引用",
+      "invariant": "关节有且仅有一个在前的父节点或为唯一根",
+      "observable": "错误父节点被预检拒绝",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "02-angle-key",
+      "task_type": "功能优化",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/pose.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py"
+      ],
+      "subject": "姿态采样",
+      "state": "关键帧间",
+      "invariant": "按源帧插值，叶和父节点各自解释",
+      "observable": "中间帧的千分单位关节点可比较",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "02-root-world",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-mark-cross",
+      "task_type": "功能优化",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/motion.py"
+      ],
+      "subject": "帧事件",
+      "state": "跨过中间源帧",
+      "invariant": "按穿越先后列出，同帧遵循声明顺序",
+      "observable": "被越过但穿过的事件仍出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "02-clock-loop",
+      "task_type": "功能优化",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "02-clock-dwell",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/runner.py"
+      ],
+      "subject": "单次动作",
+      "state": "源帧耗尽",
+      "invariant": "尾停留中仍可继续评估无帧事件的边",
+      "observable": "展示帧不变，穿越数组为空",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-command-index",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "按键身份",
+      "state": "输入到达",
+      "invariant": "以声明中的位置识别输入，在实际到达拍入缓冲",
+      "observable": "重复命令获得不同编号",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-command-expire",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-command-consume",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "消费",
+      "state": "两个命令相同",
+      "invariant": "消费最早的一个",
+      "observable": "其余编号仍在缓冲列表",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-transition-tie",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "ranking_reorder",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/gates.py"
+      ],
+      "subject": "动作边顺位",
+      "state": "同级同时满足",
+      "invariant": "声明顺序决定唯一胜者",
+      "observable": "运行动作记录另一条顺位在后",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-transition-age",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/gates.py"
+      ],
+      "subject": "停留门",
+      "state": "进入目标首拍",
+      "invariant": "新的停留拍数从 1 起算",
+      "observable": "解释列表可同时显示多个未满足项",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-transition-tag",
+      "task_type": "功能优化",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/edges.py",
+          "stride/clips.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/edges.py",
+        "stride/clips.py"
+      ],
+      "subject": "帧事件条件",
+      "state": "来源片段换标记",
+      "invariant": "标签须真实存在于同一来源片段",
+      "observable": "被引用的标签不存在返回 422",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "02-check-root",
+      "task_type": "功能优化",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/document.py"
+      ],
+      "subject": "根轨长度",
+      "state": "片段改帧数",
+      "invariant": "每个源帧有一个根位移",
+      "observable": "单独改帧数会被预检拒绝",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "02-enter-later",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-mirror",
+      "task_type": "功能优化",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/pose.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/pose.py",
+        "stride/motion.py"
+      ],
+      "subject": "镜像变体",
+      "state": "横向方向反转",
+      "invariant": "只反射空间，不重命名事件或命令",
+      "observable": "相同脚本的空间呈对称，转场相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "02-scene-speed",
+      "task_type": "功能优化",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/clock.py"
+      ],
+      "subject": "源帧推进速率",
+      "state": "两帧模式",
+      "invariant": "源帧数变而命令仍按预演拍到达",
+      "observable": "快进有不同源帧覆盖但拍数相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "02-scene-range",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "输入脚本边界",
+      "state": "拍数收窄",
+      "invariant": "输入拍必须在有效范围内",
+      "observable": "不合法图无法启动预演",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-scene-variant",
+      "task_type": "功能优化",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/api.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/api.py",
+        "stride/scenes.py"
+      ],
+      "subject": "预演局部变体",
+      "state": "临时输入覆盖",
+      "invariant": "同一图可独立预演两份场景",
+      "observable": "两侧输出不会串写",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "02-trace-observable",
+      "task_type": "功能优化",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "02-trace-length",
+      "task_type": "功能优化",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/scenes.py"
+      ],
+      "subject": "对照尾端",
+      "state": "场景拍数不等",
+      "invariant": "无对应行的拍点标记长度差异",
+      "observable": "一侧多拍不被无声丢掉",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "02-playhead",
+      "task_type": "功能优化",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/web/timeline.js",
+          "stride/web/main.js"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/web/timeline.js",
+        "stride/web/main.js"
+      ],
+      "subject": "预演播放",
+      "state": "播放中手动选拍",
+      "invariant": "手动操作终止计时并画所选拍",
+      "observable": "检查器与骨架共用拍号",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "02-lineage",
+      "task_type": "功能优化",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "图祖先",
+      "state": "取回非当前版本",
+      "invariant": "基于内容和父身份识别图并保持原图",
+      "observable": "可读取的历史轨迹与原先一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "02-head",
+      "task_type": "功能优化",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/fs.py"
+        ]
+      },
+      "primary_mechanism": "concurrency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/fs.py"
+      ],
+      "subject": "工作头",
+      "state": "竞争写入",
+      "invariant": "锁内验证基准后再更换头指针",
+      "observable": "落后的写入收到 409",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "02-repeat-save",
+      "task_type": "功能优化",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/document.py"
+      ],
+      "subject": "保存",
+      "state": "规范化草稿等于当前图",
+      "invariant": "不新增子修订",
+      "observable": "返回同一身份",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "02-pack-pinning",
+      "task_type": "功能优化",
+      "capability_family": "导出与冻结",
+      "existing_touch_points": {
+        "files": [
+          "stride/pack.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "export_freeze",
+      "source_anchors": [
+        "stride/pack.py",
+        "stride/revision.py"
+      ],
+      "subject": "交接资料",
+      "state": "选中保存修订",
+      "invariant": "场景取自该修订且轨迹随包",
+      "observable": "下载旧版可在最新工作头之外复演",
+      "workflow_ids": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "02-pack-hash",
+      "task_type": "功能优化",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/codec.py"
+      ],
+      "subject": "包内容摘要",
+      "state": "外部修改",
+      "invariant": "内容摘要需重新匹配",
+      "observable": "只有字节层改变时报告摘要问题",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "02-pack-id",
+      "task_type": "功能优化",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/revision.py"
+      ],
+      "subject": "包图修订",
+      "state": "父信息与图匹配",
+      "invariant": "修订绑定规范图及父身份",
+      "observable": "即使更新包摘要仍可发现身份不符",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "02-pack-recompute",
+      "task_type": "功能优化",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    },
+    {
+      "id": "02-source-editor",
+      "task_type": "功能优化",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/web/main.js",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "error_propagation",
+      "source_anchors": [
+        "stride/web/main.js",
+        "stride/document.py"
+      ],
+      "subject": "源资料编辑",
+      "state": "完整 JSON 一次生效",
+      "invariant": "拒绝值保留错误提示",
+      "observable": "可回到场景继续获取有效轨迹",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "02-revision-file",
+      "task_type": "功能优化",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "持久记录",
+      "state": "已有修订内容被改动",
+      "invariant": "读取时以文件名与摘要匹配",
+      "observable": "错误显示为身份不一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "03-clock-loop",
+      "task_type": "代码重构",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "03-clock-dwell",
+      "task_type": "代码重构",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/runner.py"
+      ],
+      "subject": "单次动作",
+      "state": "源帧耗尽",
+      "invariant": "尾停留中仍可继续评估无帧事件的边",
+      "observable": "展示帧不变，穿越数组为空",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "03-command-index",
+      "task_type": "代码重构",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "按键身份",
+      "state": "输入到达",
+      "invariant": "以声明中的位置识别输入，在实际到达拍入缓冲",
+      "observable": "重复命令获得不同编号",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "03-command-expire",
+      "task_type": "代码重构",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "03-command-consume",
+      "task_type": "代码重构",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "消费",
+      "state": "两个命令相同",
+      "invariant": "消费最早的一个",
+      "observable": "其余编号仍在缓冲列表",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "03-transition-tie",
+      "task_type": "代码重构",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "ranking_reorder",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/gates.py"
+      ],
+      "subject": "动作边顺位",
+      "state": "同级同时满足",
+      "invariant": "声明顺序决定唯一胜者",
+      "observable": "运行动作记录另一条顺位在后",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "03-transition-age",
+      "task_type": "代码重构",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/gates.py"
+      ],
+      "subject": "停留门",
+      "state": "进入目标首拍",
+      "invariant": "新的停留拍数从 1 起算",
+      "observable": "解释列表可同时显示多个未满足项",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "03-enter-later",
+      "task_type": "代码重构",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "03-scene-variant",
+      "task_type": "代码重构",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/api.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/api.py",
+        "stride/scenes.py"
+      ],
+      "subject": "预演局部变体",
+      "state": "临时输入覆盖",
+      "invariant": "同一图可独立预演两份场景",
+      "observable": "两侧输出不会串写",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "03-trace-observable",
+      "task_type": "代码重构",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "03-trace-length",
+      "task_type": "代码重构",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/scenes.py"
+      ],
+      "subject": "对照尾端",
+      "state": "场景拍数不等",
+      "invariant": "无对应行的拍点标记长度差异",
+      "observable": "一侧多拍不被无声丢掉",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "03-lineage",
+      "task_type": "代码重构",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "图祖先",
+      "state": "取回非当前版本",
+      "invariant": "基于内容和父身份识别图并保持原图",
+      "observable": "可读取的历史轨迹与原先一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "03-head",
+      "task_type": "代码重构",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/fs.py"
+        ]
+      },
+      "primary_mechanism": "concurrency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/fs.py"
+      ],
+      "subject": "工作头",
+      "state": "竞争写入",
+      "invariant": "锁内验证基准后再更换头指针",
+      "observable": "落后的写入收到 409",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "03-repeat-save",
+      "task_type": "代码重构",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/document.py"
+      ],
+      "subject": "保存",
+      "state": "规范化草稿等于当前图",
+      "invariant": "不新增子修订",
+      "observable": "返回同一身份",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "03-revision-file",
+      "task_type": "代码重构",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "持久记录",
+      "state": "已有修订内容被改动",
+      "invariant": "读取时以文件名与摘要匹配",
+      "observable": "错误显示为身份不一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "03-pack-recompute",
+      "task_type": "代码重构",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    },
+    {
+      "id": "04-angle-key",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/pose.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py"
+      ],
+      "subject": "姿态采样",
+      "state": "关键帧间",
+      "invariant": "按源帧插值，叶和父节点各自解释",
+      "observable": "中间帧的千分单位关节点可比较",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "04-root-world",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "04-mark-cross",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/motion.py"
+      ],
+      "subject": "帧事件",
+      "state": "跨过中间源帧",
+      "invariant": "按穿越先后列出，同帧遵循声明顺序",
+      "observable": "被越过但穿过的事件仍出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "04-clock-loop",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "04-clock-dwell",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/runner.py"
+      ],
+      "subject": "单次动作",
+      "state": "源帧耗尽",
+      "invariant": "尾停留中仍可继续评估无帧事件的边",
+      "observable": "展示帧不变，穿越数组为空",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "04-command-expire",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "04-transition-age",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/gates.py"
+      ],
+      "subject": "停留门",
+      "state": "进入目标首拍",
+      "invariant": "新的停留拍数从 1 起算",
+      "observable": "解释列表可同时显示多个未满足项",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "04-enter-later",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "04-scene-speed",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/clock.py"
+      ],
+      "subject": "源帧推进速率",
+      "state": "两帧模式",
+      "invariant": "源帧数变而命令仍按预演拍到达",
+      "observable": "快进有不同源帧覆盖但拍数相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "04-scene-range",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "输入脚本边界",
+      "state": "拍数收窄",
+      "invariant": "输入拍必须在有效范围内",
+      "observable": "不合法图无法启动预演",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "04-lineage",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "图祖先",
+      "state": "取回非当前版本",
+      "invariant": "基于内容和父身份识别图并保持原图",
+      "observable": "可读取的历史轨迹与原先一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "04-head",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/fs.py"
+        ]
+      },
+      "primary_mechanism": "concurrency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/fs.py"
+      ],
+      "subject": "工作头",
+      "state": "竞争写入",
+      "invariant": "锁内验证基准后再更换头指针",
+      "observable": "落后的写入收到 409",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "04-repeat-save",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/document.py"
+      ],
+      "subject": "保存",
+      "state": "规范化草稿等于当前图",
+      "invariant": "不新增子修订",
+      "observable": "返回同一身份",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "04-revision-file",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "持久记录",
+      "state": "已有修订内容被改动",
+      "invariant": "读取时以文件名与摘要匹配",
+      "observable": "错误显示为身份不一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "04-pack-pinning",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "导出与冻结",
+      "existing_touch_points": {
+        "files": [
+          "stride/pack.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "export_freeze",
+      "source_anchors": [
+        "stride/pack.py",
+        "stride/revision.py"
+      ],
+      "subject": "交接资料",
+      "state": "选中保存修订",
+      "invariant": "场景取自该修订且轨迹随包",
+      "observable": "下载旧版可在最新工作头之外复演",
+      "workflow_ids": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "04-pack-hash",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/codec.py"
+      ],
+      "subject": "包内容摘要",
+      "state": "外部修改",
+      "invariant": "内容摘要需重新匹配",
+      "observable": "只有字节层改变时报告摘要问题",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "04-pack-id",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/revision.py"
+      ],
+      "subject": "包图修订",
+      "state": "父信息与图匹配",
+      "invariant": "修订绑定规范图及父身份",
+      "observable": "即使更新包摘要仍可发现身份不符",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "04-pack-recompute",
+      "task_type": "依赖升级与迁移",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    },
+    {
+      "id": "05-rig-tree",
+      "task_type": "质量保障",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/rig.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py"
+      ],
+      "subject": "绑定树",
+      "state": "跨关节引用",
+      "invariant": "关节有且仅有一个在前的父节点或为唯一根",
+      "observable": "错误父节点被预检拒绝",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "05-angle-key",
+      "task_type": "质量保障",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/pose.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py"
+      ],
+      "subject": "姿态采样",
+      "state": "关键帧间",
+      "invariant": "按源帧插值，叶和父节点各自解释",
+      "observable": "中间帧的千分单位关节点可比较",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "05-root-world",
+      "task_type": "质量保障",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "05-mark-cross",
+      "task_type": "质量保障",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/motion.py"
+      ],
+      "subject": "帧事件",
+      "state": "跨过中间源帧",
+      "invariant": "按穿越先后列出，同帧遵循声明顺序",
+      "observable": "被越过但穿过的事件仍出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "05-clock-loop",
+      "task_type": "质量保障",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "05-clock-dwell",
+      "task_type": "质量保障",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/runner.py"
+      ],
+      "subject": "单次动作",
+      "state": "源帧耗尽",
+      "invariant": "尾停留中仍可继续评估无帧事件的边",
+      "observable": "展示帧不变，穿越数组为空",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "05-command-index",
+      "task_type": "质量保障",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "按键身份",
+      "state": "输入到达",
+      "invariant": "以声明中的位置识别输入，在实际到达拍入缓冲",
+      "observable": "重复命令获得不同编号",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "05-command-expire",
+      "task_type": "质量保障",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "05-command-consume",
+      "task_type": "质量保障",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "消费",
+      "state": "两个命令相同",
+      "invariant": "消费最早的一个",
+      "observable": "其余编号仍在缓冲列表",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "05-transition-tie",
+      "task_type": "质量保障",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "ranking_reorder",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/gates.py"
+      ],
+      "subject": "动作边顺位",
+      "state": "同级同时满足",
+      "invariant": "声明顺序决定唯一胜者",
+      "observable": "运行动作记录另一条顺位在后",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "05-transition-age",
+      "task_type": "质量保障",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/gates.py"
+      ],
+      "subject": "停留门",
+      "state": "进入目标首拍",
+      "invariant": "新的停留拍数从 1 起算",
+      "observable": "解释列表可同时显示多个未满足项",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "05-transition-tag",
+      "task_type": "质量保障",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/edges.py",
+          "stride/clips.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/edges.py",
+        "stride/clips.py"
+      ],
+      "subject": "帧事件条件",
+      "state": "来源片段换标记",
+      "invariant": "标签须真实存在于同一来源片段",
+      "observable": "被引用的标签不存在返回 422",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "05-enter-later",
+      "task_type": "质量保障",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "05-mirror",
+      "task_type": "质量保障",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/pose.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/pose.py",
+        "stride/motion.py"
+      ],
+      "subject": "镜像变体",
+      "state": "横向方向反转",
+      "invariant": "只反射空间，不重命名事件或命令",
+      "observable": "相同脚本的空间呈对称，转场相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "05-scene-speed",
+      "task_type": "质量保障",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/clock.py"
+      ],
+      "subject": "源帧推进速率",
+      "state": "两帧模式",
+      "invariant": "源帧数变而命令仍按预演拍到达",
+      "observable": "快进有不同源帧覆盖但拍数相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "05-trace-observable",
+      "task_type": "质量保障",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "05-pack-recompute",
+      "task_type": "质量保障",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    },
+    {
+      "id": "06-rig-tree",
+      "task_type": "项目维护",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/rig.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py"
+      ],
+      "subject": "绑定树",
+      "state": "跨关节引用",
+      "invariant": "关节有且仅有一个在前的父节点或为唯一根",
+      "observable": "错误父节点被预检拒绝",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "06-angle-key",
+      "task_type": "项目维护",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/pose.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py"
+      ],
+      "subject": "姿态采样",
+      "state": "关键帧间",
+      "invariant": "按源帧插值，叶和父节点各自解释",
+      "observable": "中间帧的千分单位关节点可比较",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "06-root-world",
+      "task_type": "项目维护",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "06-mark-cross",
+      "task_type": "项目维护",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/motion.py"
+      ],
+      "subject": "帧事件",
+      "state": "跨过中间源帧",
+      "invariant": "按穿越先后列出，同帧遵循声明顺序",
+      "observable": "被越过但穿过的事件仍出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "06-clock-loop",
+      "task_type": "项目维护",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "06-clock-dwell",
+      "task_type": "项目维护",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/runner.py"
+      ],
+      "subject": "单次动作",
+      "state": "源帧耗尽",
+      "invariant": "尾停留中仍可继续评估无帧事件的边",
+      "observable": "展示帧不变，穿越数组为空",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "06-command-expire",
+      "task_type": "项目维护",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "06-transition-tag",
+      "task_type": "项目维护",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/edges.py",
+          "stride/clips.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/edges.py",
+        "stride/clips.py"
+      ],
+      "subject": "帧事件条件",
+      "state": "来源片段换标记",
+      "invariant": "标签须真实存在于同一来源片段",
+      "observable": "被引用的标签不存在返回 422",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "06-enter-later",
+      "task_type": "项目维护",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "06-mirror",
+      "task_type": "项目维护",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/pose.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/pose.py",
+        "stride/motion.py"
+      ],
+      "subject": "镜像变体",
+      "state": "横向方向反转",
+      "invariant": "只反射空间，不重命名事件或命令",
+      "observable": "相同脚本的空间呈对称，转场相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "06-scene-variant",
+      "task_type": "项目维护",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/api.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/api.py",
+        "stride/scenes.py"
+      ],
+      "subject": "预演局部变体",
+      "state": "临时输入覆盖",
+      "invariant": "同一图可独立预演两份场景",
+      "observable": "两侧输出不会串写",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "06-trace-observable",
+      "task_type": "项目维护",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "06-lineage",
+      "task_type": "项目维护",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "图祖先",
+      "state": "取回非当前版本",
+      "invariant": "基于内容和父身份识别图并保持原图",
+      "observable": "可读取的历史轨迹与原先一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "06-pack-pinning",
+      "task_type": "项目维护",
+      "capability_family": "导出与冻结",
+      "existing_touch_points": {
+        "files": [
+          "stride/pack.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "export_freeze",
+      "source_anchors": [
+        "stride/pack.py",
+        "stride/revision.py"
+      ],
+      "subject": "交接资料",
+      "state": "选中保存修订",
+      "invariant": "场景取自该修订且轨迹随包",
+      "observable": "下载旧版可在最新工作头之外复演",
+      "workflow_ids": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "06-pack-hash",
+      "task_type": "项目维护",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/codec.py"
+      ],
+      "subject": "包内容摘要",
+      "state": "外部修改",
+      "invariant": "内容摘要需重新匹配",
+      "observable": "只有字节层改变时报告摘要问题",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "06-pack-id",
+      "task_type": "项目维护",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/revision.py"
+      ],
+      "subject": "包图修订",
+      "state": "父信息与图匹配",
+      "invariant": "修订绑定规范图及父身份",
+      "observable": "即使更新包摘要仍可发现身份不符",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "06-pack-recompute",
+      "task_type": "项目维护",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    },
+    {
+      "id": "07-rig-tree",
+      "task_type": "技术讨论",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/rig.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py"
+      ],
+      "subject": "绑定树",
+      "state": "跨关节引用",
+      "invariant": "关节有且仅有一个在前的父节点或为唯一根",
+      "observable": "错误父节点被预检拒绝",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "07-angle-key",
+      "task_type": "技术讨论",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/pose.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py"
+      ],
+      "subject": "姿态采样",
+      "state": "关键帧间",
+      "invariant": "按源帧插值，叶和父节点各自解释",
+      "observable": "中间帧的千分单位关节点可比较",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "07-root-world",
+      "task_type": "技术讨论",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "07-mark-cross",
+      "task_type": "技术讨论",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/motion.py"
+      ],
+      "subject": "帧事件",
+      "state": "跨过中间源帧",
+      "invariant": "按穿越先后列出，同帧遵循声明顺序",
+      "observable": "被越过但穿过的事件仍出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "07-clock-loop",
+      "task_type": "技术讨论",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "07-clock-dwell",
+      "task_type": "技术讨论",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/runner.py"
+      ],
+      "subject": "单次动作",
+      "state": "源帧耗尽",
+      "invariant": "尾停留中仍可继续评估无帧事件的边",
+      "observable": "展示帧不变，穿越数组为空",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "07-command-expire",
+      "task_type": "技术讨论",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "07-command-consume",
+      "task_type": "技术讨论",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "消费",
+      "state": "两个命令相同",
+      "invariant": "消费最早的一个",
+      "observable": "其余编号仍在缓冲列表",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "07-transition-tie",
+      "task_type": "技术讨论",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "ranking_reorder",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/gates.py"
+      ],
+      "subject": "动作边顺位",
+      "state": "同级同时满足",
+      "invariant": "声明顺序决定唯一胜者",
+      "observable": "运行动作记录另一条顺位在后",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "07-transition-age",
+      "task_type": "技术讨论",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/gates.py"
+      ],
+      "subject": "停留门",
+      "state": "进入目标首拍",
+      "invariant": "新的停留拍数从 1 起算",
+      "observable": "解释列表可同时显示多个未满足项",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "07-enter-later",
+      "task_type": "技术讨论",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "07-mirror",
+      "task_type": "技术讨论",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/pose.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/pose.py",
+        "stride/motion.py"
+      ],
+      "subject": "镜像变体",
+      "state": "横向方向反转",
+      "invariant": "只反射空间，不重命名事件或命令",
+      "observable": "相同脚本的空间呈对称，转场相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "07-scene-speed",
+      "task_type": "技术讨论",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/clock.py"
+      ],
+      "subject": "源帧推进速率",
+      "state": "两帧模式",
+      "invariant": "源帧数变而命令仍按预演拍到达",
+      "observable": "快进有不同源帧覆盖但拍数相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "07-trace-observable",
+      "task_type": "技术讨论",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "07-pack-id",
+      "task_type": "技术讨论",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/revision.py"
+      ],
+      "subject": "包图修订",
+      "state": "父信息与图匹配",
+      "invariant": "修订绑定规范图及父身份",
+      "observable": "即使更新包摘要仍可发现身份不符",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "07-pack-recompute",
+      "task_type": "技术讨论",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    },
+    {
+      "id": "08-root-world",
+      "task_type": "问题排查与诊断",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "08-mark-cross",
+      "task_type": "问题排查与诊断",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/motion.py"
+      ],
+      "subject": "帧事件",
+      "state": "跨过中间源帧",
+      "invariant": "按穿越先后列出，同帧遵循声明顺序",
+      "observable": "被越过但穿过的事件仍出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "08-clock-loop",
+      "task_type": "问题排查与诊断",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "08-clock-dwell",
+      "task_type": "问题排查与诊断",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/runner.py"
+      ],
+      "subject": "单次动作",
+      "state": "源帧耗尽",
+      "invariant": "尾停留中仍可继续评估无帧事件的边",
+      "observable": "展示帧不变，穿越数组为空",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "08-command-index",
+      "task_type": "问题排查与诊断",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "按键身份",
+      "state": "输入到达",
+      "invariant": "以声明中的位置识别输入，在实际到达拍入缓冲",
+      "observable": "重复命令获得不同编号",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "08-command-expire",
+      "task_type": "问题排查与诊断",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "08-command-consume",
+      "task_type": "问题排查与诊断",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "消费",
+      "state": "两个命令相同",
+      "invariant": "消费最早的一个",
+      "observable": "其余编号仍在缓冲列表",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "08-transition-tie",
+      "task_type": "问题排查与诊断",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "ranking_reorder",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/gates.py"
+      ],
+      "subject": "动作边顺位",
+      "state": "同级同时满足",
+      "invariant": "声明顺序决定唯一胜者",
+      "observable": "运行动作记录另一条顺位在后",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "08-transition-age",
+      "task_type": "问题排查与诊断",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/gates.py"
+      ],
+      "subject": "停留门",
+      "state": "进入目标首拍",
+      "invariant": "新的停留拍数从 1 起算",
+      "observable": "解释列表可同时显示多个未满足项",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "08-transition-tag",
+      "task_type": "问题排查与诊断",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/edges.py",
+          "stride/clips.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/edges.py",
+        "stride/clips.py"
+      ],
+      "subject": "帧事件条件",
+      "state": "来源片段换标记",
+      "invariant": "标签须真实存在于同一来源片段",
+      "observable": "被引用的标签不存在返回 422",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "08-enter-later",
+      "task_type": "问题排查与诊断",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "08-scene-speed",
+      "task_type": "问题排查与诊断",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/clock.py"
+      ],
+      "subject": "源帧推进速率",
+      "state": "两帧模式",
+      "invariant": "源帧数变而命令仍按预演拍到达",
+      "observable": "快进有不同源帧覆盖但拍数相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "08-trace-observable",
+      "task_type": "问题排查与诊断",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "08-head",
+      "task_type": "问题排查与诊断",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/fs.py"
+        ]
+      },
+      "primary_mechanism": "concurrency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/fs.py"
+      ],
+      "subject": "工作头",
+      "state": "竞争写入",
+      "invariant": "锁内验证基准后再更换头指针",
+      "observable": "落后的写入收到 409",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "08-revision-file",
+      "task_type": "问题排查与诊断",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "持久记录",
+      "state": "已有修订内容被改动",
+      "invariant": "读取时以文件名与摘要匹配",
+      "observable": "错误显示为身份不一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "08-pack-pinning",
+      "task_type": "问题排查与诊断",
+      "capability_family": "导出与冻结",
+      "existing_touch_points": {
+        "files": [
+          "stride/pack.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "export_freeze",
+      "source_anchors": [
+        "stride/pack.py",
+        "stride/revision.py"
+      ],
+      "subject": "交接资料",
+      "state": "选中保存修订",
+      "invariant": "场景取自该修订且轨迹随包",
+      "observable": "下载旧版可在最新工作头之外复演",
+      "workflow_ids": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "08-pack-hash",
+      "task_type": "问题排查与诊断",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/codec.py"
+      ],
+      "subject": "包内容摘要",
+      "state": "外部修改",
+      "invariant": "内容摘要需重新匹配",
+      "observable": "只有字节层改变时报告摘要问题",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "08-pack-id",
+      "task_type": "问题排查与诊断",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/revision.py"
+      ],
+      "subject": "包图修订",
+      "state": "父信息与图匹配",
+      "invariant": "修订绑定规范图及父身份",
+      "observable": "即使更新包摘要仍可发现身份不符",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "08-pack-recompute",
+      "task_type": "问题排查与诊断",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    },
+    {
+      "id": "09-scene-variant",
+      "task_type": "部署运维",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/api.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/api.py",
+        "stride/scenes.py"
+      ],
+      "subject": "预演局部变体",
+      "state": "临时输入覆盖",
+      "invariant": "同一图可独立预演两份场景",
+      "observable": "两侧输出不会串写",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "09-trace-observable",
+      "task_type": "部署运维",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "09-trace-length",
+      "task_type": "部署运维",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/scenes.py"
+      ],
+      "subject": "对照尾端",
+      "state": "场景拍数不等",
+      "invariant": "无对应行的拍点标记长度差异",
+      "observable": "一侧多拍不被无声丢掉",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "09-lineage",
+      "task_type": "部署运维",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "图祖先",
+      "state": "取回非当前版本",
+      "invariant": "基于内容和父身份识别图并保持原图",
+      "observable": "可读取的历史轨迹与原先一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "09-head",
+      "task_type": "部署运维",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/fs.py"
+        ]
+      },
+      "primary_mechanism": "concurrency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/fs.py"
+      ],
+      "subject": "工作头",
+      "state": "竞争写入",
+      "invariant": "锁内验证基准后再更换头指针",
+      "observable": "落后的写入收到 409",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "09-repeat-save",
+      "task_type": "部署运维",
+      "capability_family": "并发与锁",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/document.py"
+      ],
+      "subject": "保存",
+      "state": "规范化草稿等于当前图",
+      "invariant": "不新增子修订",
+      "observable": "返回同一身份",
+      "workflow_ids": [
+        "save"
+      ]
+    },
+    {
+      "id": "09-revision-file",
+      "task_type": "部署运维",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "持久记录",
+      "state": "已有修订内容被改动",
+      "invariant": "读取时以文件名与摘要匹配",
+      "observable": "错误显示为身份不一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "09-pack-pinning",
+      "task_type": "部署运维",
+      "capability_family": "导出与冻结",
+      "existing_touch_points": {
+        "files": [
+          "stride/pack.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "export_freeze",
+      "source_anchors": [
+        "stride/pack.py",
+        "stride/revision.py"
+      ],
+      "subject": "交接资料",
+      "state": "选中保存修订",
+      "invariant": "场景取自该修订且轨迹随包",
+      "observable": "下载旧版可在最新工作头之外复演",
+      "workflow_ids": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "09-pack-hash",
+      "task_type": "部署运维",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "versioning_audit",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/codec.py"
+      ],
+      "subject": "包内容摘要",
+      "state": "外部修改",
+      "invariant": "内容摘要需重新匹配",
+      "observable": "只有字节层改变时报告摘要问题",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "09-pack-id",
+      "task_type": "部署运维",
+      "capability_family": "完整性和语义",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/revision.py"
+      ],
+      "subject": "包图修订",
+      "state": "父信息与图匹配",
+      "invariant": "修订绑定规范图及父身份",
+      "observable": "即使更新包摘要仍可发现身份不符",
+      "workflow_ids": [
+        "verify"
+      ]
+    },
+    {
+      "id": "09-pack-recompute",
+      "task_type": "部署运维",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    },
+    {
+      "id": "09-source-editor",
+      "task_type": "部署运维",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/web/main.js",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "error_propagation",
+      "source_anchors": [
+        "stride/web/main.js",
+        "stride/document.py"
+      ],
+      "subject": "源资料编辑",
+      "state": "完整 JSON 一次生效",
+      "invariant": "拒绝值保留错误提示",
+      "observable": "可回到场景继续获取有效轨迹",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "09-scene-range",
+      "task_type": "部署运维",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "capacity",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "输入脚本边界",
+      "state": "拍数收窄",
+      "invariant": "输入拍必须在有效范围内",
+      "observable": "不合法图无法启动预演",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "09-rig-tree",
+      "task_type": "部署运维",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/rig.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py"
+      ],
+      "subject": "绑定树",
+      "state": "跨关节引用",
+      "invariant": "关节有且仅有一个在前的父节点或为唯一根",
+      "observable": "错误父节点被预检拒绝",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "09-angle-key",
+      "task_type": "部署运维",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/pose.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py"
+      ],
+      "subject": "姿态采样",
+      "state": "关键帧间",
+      "invariant": "按源帧插值，叶和父节点各自解释",
+      "observable": "中间帧的千分单位关节点可比较",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "09-root-world",
+      "task_type": "部署运维",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "10-rig-tree",
+      "task_type": "泛Agent需求",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/rig.py",
+          "stride/document.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/rig.py",
+        "stride/document.py"
+      ],
+      "subject": "绑定树",
+      "state": "跨关节引用",
+      "invariant": "关节有且仅有一个在前的父节点或为唯一根",
+      "observable": "错误父节点被预检拒绝",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "10-angle-key",
+      "task_type": "泛Agent需求",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clips.py",
+          "stride/pose.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/clips.py",
+        "stride/pose.py"
+      ],
+      "subject": "姿态采样",
+      "state": "关键帧间",
+      "invariant": "按源帧插值，叶和父节点各自解释",
+      "observable": "中间帧的千分单位关节点可比较",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "10-root-world",
+      "task_type": "泛Agent需求",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/motion.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/motion.py",
+        "stride/runner.py"
+      ],
+      "subject": "世界根轨",
+      "state": "经过转场",
+      "invariant": "本拍位移与来源动作穿越帧绑定",
+      "observable": "世界位置跨到目标动作仍连续",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "10-mark-cross",
+      "task_type": "泛Agent需求",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/motion.py"
+      ],
+      "subject": "帧事件",
+      "state": "跨过中间源帧",
+      "invariant": "按穿越先后列出，同帧遵循声明顺序",
+      "observable": "被越过但穿过的事件仍出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "10-clock-loop",
+      "task_type": "泛Agent需求",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/clock.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "resource_lifecycle",
+      "source_anchors": [
+        "stride/clock.py",
+        "stride/motion.py"
+      ],
+      "subject": "循环动作",
+      "state": "越过尾帧",
+      "invariant": "有余量时继续穿越起始帧",
+      "observable": "同一拍末帧与首帧可共同出现",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "10-command-index",
+      "task_type": "泛Agent需求",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/scenes.py",
+          "stride/inputs.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/scenes.py",
+        "stride/inputs.py"
+      ],
+      "subject": "按键身份",
+      "state": "输入到达",
+      "invariant": "以声明中的位置识别输入，在实际到达拍入缓冲",
+      "observable": "重复命令获得不同编号",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "10-command-expire",
+      "task_type": "泛Agent需求",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "time_semantics",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "有效窗口",
+      "state": "年龄等于有效期",
+      "invariant": "等于有效期仍可使用",
+      "observable": "下一拍会列为过期",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "10-command-consume",
+      "task_type": "泛Agent需求",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/inputs.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "idempotency",
+      "source_anchors": [
+        "stride/inputs.py",
+        "stride/gates.py"
+      ],
+      "subject": "消费",
+      "state": "两个命令相同",
+      "invariant": "消费最早的一个",
+      "observable": "其余编号仍在缓冲列表",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "10-transition-tie",
+      "task_type": "泛Agent需求",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/compile.py",
+          "stride/gates.py"
+        ]
+      },
+      "primary_mechanism": "ranking_reorder",
+      "source_anchors": [
+        "stride/compile.py",
+        "stride/gates.py"
+      ],
+      "subject": "动作边顺位",
+      "state": "同级同时满足",
+      "invariant": "声明顺序决定唯一胜者",
+      "observable": "运行动作记录另一条顺位在后",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "10-transition-tag",
+      "task_type": "泛Agent需求",
+      "capability_family": "规则与约束",
+      "existing_touch_points": {
+        "files": [
+          "stride/edges.py",
+          "stride/clips.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/edges.py",
+        "stride/clips.py"
+      ],
+      "subject": "帧事件条件",
+      "state": "来源片段换标记",
+      "invariant": "标签须真实存在于同一来源片段",
+      "observable": "被引用的标签不存在返回 422",
+      "workflow_ids": [
+        "validate"
+      ]
+    },
+    {
+      "id": "10-enter-later",
+      "task_type": "泛Agent需求",
+      "capability_family": "时序及仲裁",
+      "existing_touch_points": {
+        "files": [
+          "stride/runner.py",
+          "stride/clock.py"
+        ]
+      },
+      "primary_mechanism": "state_machine",
+      "source_anchors": [
+        "stride/runner.py",
+        "stride/clock.py"
+      ],
+      "subject": "转场时点",
+      "state": "目标已确定",
+      "invariant": "目标下一拍接管，来源姿态仍输出",
+      "observable": "当拍的动作标识和目标可同时呈现",
+      "workflow_ids": [
+        "preview"
+      ]
+    },
+    {
+      "id": "10-mirror",
+      "task_type": "泛Agent需求",
+      "capability_family": "空间与采样",
+      "existing_touch_points": {
+        "files": [
+          "stride/pose.py",
+          "stride/motion.py"
+        ]
+      },
+      "primary_mechanism": "policy_rules",
+      "source_anchors": [
+        "stride/pose.py",
+        "stride/motion.py"
+      ],
+      "subject": "镜像变体",
+      "state": "横向方向反转",
+      "invariant": "只反射空间，不重命名事件或命令",
+      "observable": "相同脚本的空间呈对称，转场相同",
+      "workflow_ids": [
+        "variants"
+      ]
+    },
+    {
+      "id": "10-scene-variant",
+      "task_type": "泛Agent需求",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/api.py",
+          "stride/scenes.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/api.py",
+        "stride/scenes.py"
+      ],
+      "subject": "预演局部变体",
+      "state": "临时输入覆盖",
+      "invariant": "同一图可独立预演两份场景",
+      "observable": "两侧输出不会串写",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "10-trace-observable",
+      "task_type": "泛Agent需求",
+      "capability_family": "对照与归因",
+      "existing_touch_points": {
+        "files": [
+          "stride/compare.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/compare.py",
+        "stride/runner.py"
+      ],
+      "subject": "轨迹对照",
+      "state": "首次行为分歧",
+      "invariant": "比较已实现的可见字段并保留完整两侧",
+      "observable": "首差异给出拍号和字段",
+      "workflow_ids": [
+        "compare"
+      ]
+    },
+    {
+      "id": "10-lineage",
+      "task_type": "泛Agent需求",
+      "capability_family": "版本化与审计",
+      "existing_touch_points": {
+        "files": [
+          "stride/revision.py",
+          "stride/codec.py"
+        ]
+      },
+      "primary_mechanism": "lineage",
+      "source_anchors": [
+        "stride/revision.py",
+        "stride/codec.py"
+      ],
+      "subject": "图祖先",
+      "state": "取回非当前版本",
+      "invariant": "基于内容和父身份识别图并保持原图",
+      "observable": "可读取的历史轨迹与原先一致",
+      "workflow_ids": [
+        "history"
+      ]
+    },
+    {
+      "id": "10-pack-pinning",
+      "task_type": "泛Agent需求",
+      "capability_family": "导出与冻结",
+      "existing_touch_points": {
+        "files": [
+          "stride/pack.py",
+          "stride/revision.py"
+        ]
+      },
+      "primary_mechanism": "export_freeze",
+      "source_anchors": [
+        "stride/pack.py",
+        "stride/revision.py"
+      ],
+      "subject": "交接资料",
+      "state": "选中保存修订",
+      "invariant": "场景取自该修订且轨迹随包",
+      "observable": "下载旧版可在最新工作头之外复演",
+      "workflow_ids": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "10-pack-recompute",
+      "task_type": "泛Agent需求",
+      "capability_family": "复演与兼容",
+      "existing_touch_points": {
+        "files": [
+          "stride/verify.py",
+          "stride/runner.py"
+        ]
+      },
+      "primary_mechanism": "snapshot_consistency",
+      "source_anchors": [
+        "stride/verify.py",
+        "stride/runner.py"
+      ],
+      "subject": "收到的轨迹",
+      "state": "离开原实例",
+      "invariant": "复算并核对记录才展示",
+      "observable": "不读取本地同名场景进行复演",
+      "workflow_ids": [
+        "rehearse"
+      ]
+    }
+  ]
+}

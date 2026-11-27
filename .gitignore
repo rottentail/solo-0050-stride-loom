@@ -1,0 +1,4 @@
+__pycache__/
+*.py[cod]
+.stride-data/
+.DS_Store

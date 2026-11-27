@@ -1,0 +1,54 @@
+{
+  "language": "Python 3.11+ / HTML / CSS / 原生 JavaScript",
+  "project_shape": "fullstack",
+  "source_extensions": [
+    ".py",
+    ".html",
+    ".css",
+    ".js"
+  ],
+  "testing": "deferred",
+  "build_command": "python3 -m compileall -q stride",
+  "workflow_checks": [
+    {
+      "workflow_id": "load",
+      "command": "python3 -m stride walkthrough load"
+    },
+    {
+      "workflow_id": "validate",
+      "command": "python3 -m stride walkthrough validate"
+    },
+    {
+      "workflow_id": "preview",
+      "command": "python3 -m stride walkthrough preview"
+    },
+    {
+      "workflow_id": "variants",
+      "command": "python3 -m stride walkthrough variants"
+    },
+    {
+      "workflow_id": "compare",
+      "command": "python3 -m stride walkthrough compare"
+    },
+    {
+      "workflow_id": "save",
+      "command": "python3 -m stride walkthrough save"
+    },
+    {
+      "workflow_id": "history",
+      "command": "python3 -m stride walkthrough history"
+    },
+    {
+      "workflow_id": "freeze",
+      "command": "python3 -m stride walkthrough freeze"
+    },
+    {
+      "workflow_id": "verify",
+      "command": "python3 -m stride walkthrough verify"
+    },
+    {
+      "workflow_id": "rehearse",
+      "command": "python3 -m stride walkthrough rehearse"
+    }
+  ]
+}

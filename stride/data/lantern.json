@@ -1,0 +1,534 @@
+{
+  "version": 1,
+  "title": "潮灯搬运体",
+  "start": "rest",
+  "ttl": 3,
+  "commands": [
+    "stride",
+    "low",
+    "rise",
+    "pace",
+    "halt"
+  ],
+  "rig": [
+    {
+      "id": "hips",
+      "parent": null,
+      "label": "骨盆",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "id": "spine",
+      "parent": "hips",
+      "label": "躯干",
+      "dx": 0,
+      "dy": -32
+    },
+    {
+      "id": "head",
+      "parent": "spine",
+      "label": "头部",
+      "dx": 0,
+      "dy": -22
+    },
+    {
+      "id": "neararm",
+      "parent": "spine",
+      "label": "近侧手肘",
+      "dx": 15,
+      "dy": 15
+    },
+    {
+      "id": "hand",
+      "parent": "neararm",
+      "label": "近侧手掌",
+      "dx": 9,
+      "dy": 18
+    },
+    {
+      "id": "fararm",
+      "parent": "spine",
+      "label": "远侧手掌",
+      "dx": -15,
+      "dy": 27
+    },
+    {
+      "id": "nearleg",
+      "parent": "hips",
+      "label": "近侧膝",
+      "dx": 12,
+      "dy": 30
+    },
+    {
+      "id": "nearfoot",
+      "parent": "nearleg",
+      "label": "近侧足",
+      "dx": 3,
+      "dy": 27
+    },
+    {
+      "id": "farleg",
+      "parent": "hips",
+      "label": "远侧膝",
+      "dx": -12,
+      "dy": 30
+    },
+    {
+      "id": "farfoot",
+      "parent": "farleg",
+      "label": "远侧足",
+      "dx": -4,
+      "dy": 27
+    }
+  ],
+  "clips": [
+    {
+      "id": "rest",
+      "label": "静候",
+      "frames": 3,
+      "loop": true,
+      "root": [
+        0,
+        0,
+        0
+      ],
+      "marks": [
+        {
+          "at": 0,
+          "tag": "breath"
+        }
+      ],
+      "keys": [
+        {
+          "at": 0,
+          "angles": [
+            0,
+            0,
+            0,
+            -20,
+            0,
+            8,
+            -8,
+            2,
+            8,
+            -4
+          ]
+        },
+        {
+          "at": 2,
+          "angles": [
+            6,
+            -8,
+            0,
+            12,
+            -10,
+            -10,
+            -25,
+            12,
+            25,
+            -15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "walk",
+      "label": "踏行",
+      "frames": 5,
+      "loop": true,
+      "root": [
+        4,
+        6,
+        7,
+        6,
+        4
+      ],
+      "marks": [
+        {
+          "at": 0,
+          "tag": "heel"
+        },
+        {
+          "at": 2,
+          "tag": "plant"
+        },
+        {
+          "at": 4,
+          "tag": "lift"
+        }
+      ],
+      "keys": [
+        {
+          "at": 0,
+          "angles": [
+            -6,
+            8,
+            0,
+            -25,
+            5,
+            26,
+            30,
+            -22,
+            -24,
+            6
+          ]
+        },
+        {
+          "at": 2,
+          "angles": [
+            6,
+            -8,
+            0,
+            12,
+            -10,
+            -10,
+            -25,
+            12,
+            25,
+            -15
+          ]
+        },
+        {
+          "at": 4,
+          "angles": [
+            -6,
+            8,
+            0,
+            -25,
+            5,
+            26,
+            30,
+            -22,
+            -24,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crouch",
+      "label": "伏低",
+      "frames": 4,
+      "loop": false,
+      "root": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "marks": [
+        {
+          "at": 0,
+          "tag": "fold"
+        },
+        {
+          "at": 2,
+          "tag": "settle"
+        }
+      ],
+      "keys": [
+        {
+          "at": 0,
+          "angles": [
+            6,
+            -8,
+            0,
+            12,
+            -10,
+            -10,
+            -25,
+            12,
+            25,
+            -15
+          ]
+        },
+        {
+          "at": 2,
+          "angles": [
+            15,
+            -21,
+            4,
+            -36,
+            2,
+            28,
+            -38,
+            40,
+            24,
+            -48
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quick",
+      "label": "疾步",
+      "frames": 4,
+      "loop": true,
+      "root": [
+        9,
+        12,
+        10,
+        8
+      ],
+      "marks": [
+        {
+          "at": 1,
+          "tag": "plant"
+        },
+        {
+          "at": 3,
+          "tag": "lift"
+        }
+      ],
+      "keys": [
+        {
+          "at": 0,
+          "angles": [
+            6,
+            -8,
+            0,
+            12,
+            -10,
+            -10,
+            -25,
+            12,
+            25,
+            -15
+          ]
+        },
+        {
+          "at": 2,
+          "angles": [
+            -6,
+            8,
+            0,
+            -25,
+            5,
+            26,
+            30,
+            -22,
+            -24,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "upright",
+      "label": "起身",
+      "frames": 3,
+      "loop": false,
+      "root": [
+        0,
+        1,
+        0
+      ],
+      "marks": [
+        {
+          "at": 1,
+          "tag": "unfold"
+        }
+      ],
+      "keys": [
+        {
+          "at": 0,
+          "angles": [
+            15,
+            -21,
+            4,
+            -36,
+            2,
+            28,
+            -38,
+            40,
+            24,
+            -48
+          ]
+        },
+        {
+          "at": 2,
+          "angles": [
+            0,
+            0,
+            0,
+            -20,
+            0,
+            8,
+            -8,
+            2,
+            8,
+            -4
+          ]
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "start_walk",
+      "source": "rest",
+      "target": "walk",
+      "command": "stride",
+      "age": 1,
+      "priority": 20,
+      "mark": null
+    },
+    {
+      "id": "plant_crouch",
+      "source": "walk",
+      "target": "crouch",
+      "command": "low",
+      "age": 2,
+      "priority": 30,
+      "mark": "plant"
+    },
+    {
+      "id": "plant_pace",
+      "source": "walk",
+      "target": "quick",
+      "command": "pace",
+      "age": 1,
+      "priority": 20,
+      "mark": "plant"
+    },
+    {
+      "id": "stop_walk",
+      "source": "walk",
+      "target": "rest",
+      "command": "halt",
+      "age": 2,
+      "priority": 10,
+      "mark": null
+    },
+    {
+      "id": "stand_up",
+      "source": "crouch",
+      "target": "upright",
+      "command": "rise",
+      "age": 2,
+      "priority": 20,
+      "mark": "settle"
+    },
+    {
+      "id": "from_upright",
+      "source": "upright",
+      "target": "walk",
+      "command": "stride",
+      "age": 1,
+      "priority": 20,
+      "mark": "unfold"
+    },
+    {
+      "id": "quick_low",
+      "source": "quick",
+      "target": "crouch",
+      "command": "low",
+      "age": 2,
+      "priority": 20,
+      "mark": "plant"
+    },
+    {
+      "id": "quick_stop",
+      "source": "quick",
+      "target": "rest",
+      "command": "halt",
+      "age": 1,
+      "priority": 20,
+      "mark": null
+    }
+  ],
+  "scenes": [
+    {
+      "id": "dock-pass",
+      "label": "靠岸练步",
+      "ticks": 18,
+      "inputs": [
+        {
+          "at": 0,
+          "command": "stride"
+        },
+        {
+          "at": 2,
+          "command": "low"
+        },
+        {
+          "at": 4,
+          "command": "rise"
+        },
+        {
+          "at": 7,
+          "command": "stride"
+        },
+        {
+          "at": 11,
+          "command": "pace"
+        },
+        {
+          "at": 14,
+          "command": "halt"
+        }
+      ],
+      "mirror": false,
+      "speed": 1
+    },
+    {
+      "id": "two-offers",
+      "label": "同拍仲裁",
+      "ticks": 14,
+      "inputs": [
+        {
+          "at": 0,
+          "command": "stride"
+        },
+        {
+          "at": 2,
+          "command": "low"
+        },
+        {
+          "at": 2,
+          "command": "pace"
+        },
+        {
+          "at": 3,
+          "command": "low"
+        },
+        {
+          "at": 5,
+          "command": "rise"
+        },
+        {
+          "at": 7,
+          "command": "stride"
+        }
+      ],
+      "mirror": false,
+      "speed": 1
+    },
+    {
+      "id": "countermarch",
+      "label": "反向快进",
+      "ticks": 12,
+      "inputs": [
+        {
+          "at": 0,
+          "command": "stride"
+        },
+        {
+          "at": 1,
+          "command": "pace"
+        },
+        {
+          "at": 5,
+          "command": "low"
+        },
+        {
+          "at": 7,
+          "command": "rise"
+        }
+      ],
+      "mirror": true,
+      "speed": 2
+    }
+  ]
+}
